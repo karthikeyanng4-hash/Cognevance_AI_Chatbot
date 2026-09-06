@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Karthikeyan AI – Personal AI Assistant</title>
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3.0">
+</head>
+
+<body>
+
+<!-- Mobile Sidebar Backdrop Overlay -->
+<div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebar(false)"></div>
+
+<div class="app-container">
+
+    <!-- =====================================================
+         SIDEBAR (DESKTOP & SLIDE-IN MOBILE DRAWER)
+    ===================================================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+            <div class="logo">
+                <div class="logo-icon">🤖</div>
+                <div class="logo-text">
+                    <h2>Karthikeyan AI</h2>
+                    <p>Personal AI Assistant</p>
+                </div>
+            </div>
+            <!-- Close button for mobile sidebar -->
+            <button class="sidebar-close-btn" id="sidebarCloseBtn" onclick="toggleSidebar(false)" aria-label="Close menu">
+                ✕
+            </button>
+        </div>
+
+        <button class="new-chat-btn" onclick="newChat()" id="newChatBtn">
+            <span class="btn-sparkle">✨</span>
+            <span>New Chat</span>
+        </button>
+
+        <div class="sidebar-info">
+            <div class="sidebar-section-title">Quick Prompts</div>
+
+            <button class="quick-btn" onclick="quickQuestion('Who is Karthikeyan?')">
+                <span class="quick-icon">👤</span>
+                <span class="quick-text">About Karthikeyan</span>
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What are his skills?')">
+                <span class="quick-icon">💻</span>
+                <span class="quick-text">Skills & Tech Stack</span>
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What projects has he done?')">
+                <span class="quick-icon">🚀</span>
+                <span class="quick-text">Projects</span>
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What is his education?')">
+                <span class="quick-icon">🎓</span>
+                <span class="quick-text">Education</span>
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What is his CGPA?')">
+                <span class="quick-icon">📊</span>
+                <span class="quick-text">Academic CGPA</span>
+            </button>
+
+            <button class="quick-btn" onclick="quickQuestion('What are his hobbies?')">
+                <span class="quick-icon">🎨</span>
+                <span class="quick-text">Hobbies & Interests</span>
+            </button>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="royal-badge">
+                <span class="crown-icon">👑</span>
+                <span>Royal Edition</span>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CHAT CONTAINER
+    ===================================================== -->
+    <main class="chat-container">
+
+        <!-- =================================================
+             PREMIUM RESPONSIVE HEADER
+        ================================================= -->
+        <header class="chat-header">
+            
+            <div class="header-left">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleSidebar(true)" aria-label="Open Prompts Menu">
+                    <span class="menu-icon">☰</span>
+                </button>
+
+                <div class="header-branding">
+                    <div class="header-logo-icon">🤖</div>
+                    <div class="header-title-group">
+                        <div class="header-title-row">
+                            <h1 class="header-title">Karthikeyan AI</h1>
+                            <div class="status-indicator desktop-status">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Online</span>
+                            </div>
+                        </div>
+                        <p class="header-subtitle">Personal AI Assistant</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="status-indicator mobile-status">
+                    <span class="status-dot"></span>
+                </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark or light theme">
+                    <span class="theme-icon" id="themeIcon">☀️</span>
+                    <span class="theme-label" id="themeLabel">Light</span>
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CHAT MESSAGES AREA
+        ================================================= -->
+        <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+
+            <!-- WELCOME MESSAGE -->
+            <div class="message bot-message welcome-message">
+                <div class="avatar">🤖</div>
+
+                <div class="message-content">
+                    <div class="bot-name">
+                        <span>Karthikeyan AI</span>
+                        <span class="ai-badge">AI Assistant</span>
+                    </div>
+
+                    <div class="bubble welcome-bubble">
+                        <h3>👋 Welcome!</h3>
+                        <p class="welcome-intro">
+                            I am <strong>Karthikeyan's Personal AI Assistant</strong>, designed to assist you with comprehensive details about his background and work.
+                        </p>
+                        <p class="welcome-hint">Feel free to inquire about:</p>
+
+                        <ul class="welcome-topics">
+                            <li onclick="quickQuestion('What is his education?')">🎓 Education & Degree</li>
+                            <li onclick="quickQuestion('What are his skills?')">💻 Skills & Tools</li>
+                            <li onclick="quickQuestion('What projects has he done?')">🚀 Featured Projects</li>
+                            <li onclick="quickQuestion('What is his CGPA?')">📊 Marks & CGPA</li>
+                            <li onclick="quickQuestion('Who is Karthikeyan?')">👤 Career Journey</li>
+                            <li onclick="quickQuestion('What are his hobbies?')">🎨 Hobbies & Passions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dedicated bottom scroll anchor -->
+            <div id="chatBottomAnchor" class="chat-bottom-anchor"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             FIXED / STICKY CHAT INPUT AREA
+        ================================================= -->
+        <footer class="input-area">
+
+            <!-- Mobile Quick Chips (Horizontally Scrollable) -->
+            <div class="quick-chips-bar" id="quickChipsBar">
+                <button class="chip" onclick="quickQuestion('Who is Karthikeyan?')">👤 About</button>
+                <button class="chip" onclick="quickQuestion('What are his skills?')">💻 Skills</button>
+                <button class="chip" onclick="quickQuestion('What projects has he done?')">🚀 Projects</button>
+                <button class="chip" onclick="quickQuestion('What is his education?')">🎓 Education</button>
+                <button class="chip" onclick="quickQuestion('What is his CGPA?')">📊 CGPA</button>
+            </div>
+
+            <form class="input-box" id="chatForm" onsubmit="event.preventDefault(); sendMessage();">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask something about Karthikeyan..."
+                    autocomplete="off"
+                    aria-label="Ask something about Karthikeyan"
+                >
+
+                <button
+                    type="submit"
+                    id="sendButton"
+                    aria-label="Send message"
+                >
+                    <svg class="send-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="input-disclaimer">
+                Powered by NLP • Royal Luxury Edition
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="{{ url_for('static', filename='script.js') }}?v=3.0"></script>
+
+</body>
+</html>

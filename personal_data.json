@@ -1,0 +1,138 @@
+{
+  "full_name": "Nattamai Ganesh Babu Karthikeyan",
+  "preferred_name": "Karthikeyan N G",
+  "age": 19,
+  "date_of_birth": "21 August 2007",
+  "city": "Madurai",
+
+  "about": "Karthikeyan is a passionate Cyber Security student and aspiring AI Engineer with strong interests in Artificial Intelligence, Machine Learning, software development, and problem-solving.",
+
+  "unique": "One unique thing about Karthikeyan is that he has polydactyly and has six toes on his left foot.",
+
+  "education": {
+
+    "10th": {
+      "school": "Zion Good Shepherd's Matric Higher Secondary School",
+      "percentage": "92.2%",
+      "marks": {
+        "tamil": 87,
+        "english": 97,
+        "mathematics": 94,
+        "science": 95,
+        "social science": 88
+      }
+    },
+
+    "11th": {
+      "school": "The TVS School",
+      "percentage": "92.00%",
+      "group": "Computer Science",
+      "marks": {
+        "tamil": 91,
+        "english": 91,
+        "mathematics": 87,
+        "physics": 93,
+        "chemistry": 92,
+        "computer science": 98
+      }
+    },
+
+    "12th": {
+      "school": "The TVS School",
+      "percentage": "90.17%",
+      "group": "Computer Science",
+      "marks": {
+        "tamil": 97,
+        "english": 91,
+        "mathematics": 73,
+        "physics": 87,
+        "chemistry": 93,
+        "computer science": 100
+      }
+    },
+
+    "college": "Coimbatore Institute of Engineering and Technology",
+    "department": "Computer Science and Engineering (Cyber Security)",
+    "current_year": "Second Year",
+    "graduation_year": 2029,
+    "cgpa": "9.22"
+  },
+
+  "skills": {
+    "programming_languages": [
+      "Java (Basics)",
+      "Python",
+      "C",
+      "JavaScript"
+    ],
+
+    "technical_skills": [
+      "React",
+      "HTML",
+      "CSS",
+      "Node.js",
+      "Frontend Development",
+      "Data Structures and Algorithms (Learning)"
+    ],
+
+    "tools": [
+      "Git",
+      "GitHub",
+      "n8n",
+      "Vercel"
+    ]
+  },
+
+  "projects": {
+
+    "government_scheme_navigator": {
+      "name": "Government Scheme Navigator",
+      "description": "An AI-powered project developed during a hackathon to help citizens easily discover and understand government welfare schemes based on their profile, needs, and eligibility.",
+      "link": "https://github.com/karthikeyanng4-hash/Hackproject.git"
+    },
+
+    "movie_recommendation": {
+      "name": "AI Movie Recommendation System",
+      "description": "A movie recommendation system built using the MovieLens dataset. It recommends movies to users based on similarities in movie preferences and genre interests.",
+      "link": "https://github.com/karthikeyanng4-hash"
+    },
+
+    "hangman": {
+      "name": "Hangman Game",
+      "description": "An interactive word guessing game demonstrating loops, conditional statements, strings, lists, user input, and game logic.",
+      "link": "https://hangman-game-q7e3nzsfl-karthikeyanng4-hashs-projects.vercel.app"
+    }
+  },
+
+  "career_goal": "Karthikeyan aims to build a successful career as an AI Engineer specializing in Artificial Intelligence, Machine Learning, and intelligent software systems.",
+
+  "hobbies": [
+    "Coding",
+    "Developing Projects",
+    "Software Development"
+  ],
+
+  "interests": [
+    "Computer Science",
+    "Cricket",
+    "Artificial Intelligence"
+  ],
+
+  "family": {
+    "father": "N. K. Ganesh Babu",
+    "mother": "N. G. Vijayalakshmi",
+    "younger_brother": "N. G. Abishek Kumar",
+    "family_members": 4
+  },
+
+  "profiles": {
+    "linkedin": "https://www.linkedin.com/in/karthikeyan-n-g-493b52323/",
+    "leetcode": "https://leetcode.com/u/Karthi_keyan_007/",
+    "github": "https://github.com/karthikeyanng4-hash"
+  },
+
+  "girlfriend": {
+    "name": "Ishuwarya T N",
+    "password": "12102005"
+  }
+}

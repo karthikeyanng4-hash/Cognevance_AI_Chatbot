@@ -1,0 +1,532 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening",
+        "hello chatbot",
+        "hi chatbot"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "see you later",
+        "take care",
+        "bye chatbot"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thanks a lot",
+        "thank you so much"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "what can i ask",
+        "what questions can i ask",
+        "what can you tell me",
+        "show me available questions",
+        "how can you help me"
+      ]
+    },
+    {
+      "tag": "identity",
+      "patterns": [
+        "who are you",
+        "what are you",
+        "tell me about yourself",
+        "introduce yourself",
+        "what is this chatbot",
+        "who is this",
+        "what chatbot are you"
+      ]
+    },
+    {
+      "tag": "about_me",
+      "patterns": [
+        "who is karthikeyan",
+        "tell me about karthikeyan",
+        "describe karthikeyan",
+        "give me information about karthikeyan",
+        "what do you know about karthikeyan",
+        "introduce karthikeyan",
+        "tell me who karthikeyan is"
+      ]
+    },
+    {
+      "tag": "short_intro",
+      "patterns": [
+        "who is karthikeyan in less than 50 words",
+        "introduce karthikeyan shortly",
+        "tell me about karthikeyan shortly",
+        "give a short introduction about karthikeyan",
+        "describe karthikeyan in short",
+        "who is he in short"
+      ]
+    },
+    {
+      "tag": "full_name",
+      "patterns": [
+        "what is karthikeyan full name",
+        "what is his full name",
+        "tell me karthikeyan full name",
+        "what is your full name",
+        "tell me his name",
+        "what is his name",
+        "what's his name",
+        "who is he",
+        "karthikeyan name",
+        "name"
+      ]
+    },
+    {
+      "tag": "age",
+      "patterns": [
+        "how old is karthikeyan",
+        "what is karthikeyan age",
+        "how old is he",
+        "what is his age",
+        "how old are you"
+      ]
+    },
+    {
+      "tag": "birthday",
+      "patterns": [
+        "when was karthikeyan born",
+        "what is his date of birth",
+        "when is his birthday",
+        "when was he born",
+        "what is karthikeyan birthday"
+      ]
+    },
+    {
+      "tag": "city",
+      "patterns": [
+        "where is karthikeyan from",
+        "where is he from",
+        "what is his hometown",
+        "which city is karthikeyan from",
+        "where are you from",
+        "which place is he from"
+      ]
+    },
+    {
+      "tag": "currently_studying",
+      "patterns": [
+        "is karthikeyan currently studying",
+        "is he studying or not",
+        "is karthikeyan studying currently",
+        "is he currently studying or not",
+        "does karthikeyan study now",
+        "is he a student",
+        "is karthikeyan a student"
+      ]
+    },
+    {
+      "tag": "college",
+      "patterns": [
+        "which college does karthikeyan study in",
+        "what is his college",
+        "where is karthikeyan studying",
+        "which college are you studying in",
+        "what college does he study in",
+        "where does he study"
+      ]
+    },
+    {
+      "tag": "department",
+      "patterns": [
+        "what is karthikeyan studying",
+        "what is his department",
+        "which course is he studying",
+        "what is your course",
+        "what degree is he studying",
+        "what does he study"
+      ]
+    },
+    {
+      "tag": "college_year",
+      "patterns": [
+        "which year is karthikeyan studying",
+        "what year is he in college",
+        "what is your current year",
+        "which year is he",
+        "what is his current year"
+      ]
+    },
+    {
+      "tag": "graduation",
+      "patterns": [
+        "when will he graduate",
+        "when is karthikeyan graduation",
+        "what is his graduation year",
+        "when will karthikeyan complete college",
+        "when will he finish college",
+        "expected graduation year"
+      ]
+    },
+    {
+      "tag": "10th_education",
+      "patterns": [
+        "10th",
+        "10th standard",
+        "tenth",
+        "tenth standard",
+        "tell me about 10th",
+        "where did karthikeyan study 10th",
+        "which school did he complete 10th",
+        "what is his 10th school",
+        "where did he study 10th standard",
+        "tell me about his 10th education"
+      ]
+    },
+    {
+      "tag": "10th_marks",
+      "patterns": [
+        "what are karthikeyan 10th marks",
+        "what percentage did he get in 10th",
+        "tell me his 10th percentage",
+        "how much did he score in 10th",
+        "what is his 10th mark",
+        "what are his 10th marks",
+        "10th marks",
+        "10th mark",
+        "10th percentage"
+      ]
+    },
+    {
+      "tag": "11th_education",
+      "patterns": [
+        "11th",
+        "11th standard",
+        "eleventh",
+        "eleventh standard",
+        "tell me about 11th",
+        "where did karthikeyan study 11th",
+        "which school did he complete 11th",
+        "what is his 11th school",
+        "where did he study 11th standard",
+        "tell me about his 11th education"
+      ]
+    },
+    {
+      "tag": "11th_marks",
+      "patterns": [
+        "what are karthikeyan 11th marks",
+        "what percentage did he get in 11th",
+        "tell me his 11th percentage",
+        "how much did he score in 11th",
+        "what are his 11th marks",
+        "11th marks",
+        "11th mark",
+        "11th percentage"
+      ]
+    },
+    {
+      "tag": "12th_education",
+      "patterns": [
+        "12th",
+        "12th standard",
+        "twelfth",
+        "twelfth standard",
+        "tell me about 12th",
+        "where did karthikeyan study 12th",
+        "which school did he complete 12th",
+        "what is his 12th school",
+        "where did he study 12th standard",
+        "tell me about his 12th education"
+      ]
+    },
+    {
+      "tag": "12th_marks",
+      "patterns": [
+        "what are karthikeyan 12th marks",
+        "what percentage did he get in 12th",
+        "tell me his 12th percentage",
+        "how much did he score in 12th",
+        "what are his 12th marks",
+        "12th marks",
+        "12th mark",
+        "12th percentage"
+      ]
+    },
+    {
+      "tag": "programming_languages",
+      "patterns": [
+        "what programming languages does karthikeyan know",
+        "which languages does he know",
+        "what coding languages does he know",
+        "tell me his programming skills",
+        "what languages can he code in",
+        "which programming languages does he know"
+      ]
+    },
+    {
+      "tag": "technical_skills",
+      "patterns": [
+        "what are karthikeyan skills",
+        "what are his skills",
+        "tell me his technical skills",
+        "what technologies does he know",
+        "what is he skilled in",
+        "what skills does karthikeyan have",
+        "what skills does he have",
+        "can you tell me what skills he has",
+        "can you tell me what skills does he have",
+        "tell me what skills he has",
+        "what are the skills he has",
+        "what is karthikeyan good at",
+        "what can he do",
+        "what are his abilities",
+        "and what skills does he have",
+        "can you tell me what skills does karthikeyan have",
+        "what skills does karthikeyan have"
+      ]
+    },
+    {
+      "tag": "tools",
+      "patterns": [
+        "what tools does karthikeyan use",
+        "what technologies does he use",
+        "what tools does he know",
+        "tell me his tools",
+        "what are his technologies"
+      ]
+    },
+    {
+      "tag": "projects",
+      "patterns": [
+        "what projects has karthikeyan completed",
+        "tell me about his projects",
+        "what are his projects",
+        "show me karthikeyan projects",
+        "what projects has he done",
+        "list his projects",
+        "what projects does he have",
+        "what projects has he done in the past",
+        "what projects did he do",
+        "tell me what projects he has done",
+        "what are the projects he completed",
+        "can you tell me his projects",
+        "show me his completed projects",
+        "what projects did karthikeyan complete",
+        "what projects does he have done in the past",
+        "tell me his previous projects"
+      ]
+    },
+    {
+      "tag": "government_scheme_project",
+      "patterns": [
+        "tell me about government scheme navigator",
+        "what is government scheme navigator",
+        "explain his government scheme project",
+        "tell me about the hackathon project",
+        "what project did he do in hackathon",
+        "government scheme navigator link",
+        "link of government scheme navigator",
+        "hackathon project link"
+      ]
+    },
+    {
+      "tag": "movie_recommendation_project",
+      "patterns": [
+        "tell me about movie recommendation system",
+        "what is his movie recommendation project",
+        "explain the ai movie recommendation system",
+        "tell me about his movie project",
+        "ai movie project",
+        "movie project",
+        "give me the project of the ai movie project",
+        "link of ai movie project",
+        "ai movie project link",
+        "movie recommendation project link"
+      ]
+    },
+    {
+      "tag": "hangman_project",
+      "patterns": [
+        "tell me about hangman game",
+        "what is his hangman project",
+        "explain the hangman game",
+        "tell me about his game project",
+        "hangman",
+        "hangman game",
+        "hangman game link",
+        "link of hangman game"
+      ]
+    },
+    {
+      "tag": "career_goal",
+      "patterns": [
+        "what is karthikeyan career goal",
+        "what does he want to become",
+        "what is his future goal",
+        "what career does he want",
+        "what is his ambition",
+        "what does karthikeyan want to become"
+      ]
+    },
+    {
+      "tag": "interests",
+      "patterns": [
+        "what does karthikeyan like",
+        "what are his interests",
+        "what is he interested in",
+        "what does he enjoy",
+        "tell me his interests",
+        "what does karthikeyan love"
+      ]
+    },
+    {
+      "tag": "hobbies",
+      "patterns": [
+        "what are his hobbies",
+        "what does karthikeyan do for fun",
+        "tell me his hobbies",
+        "what are karthikeyan hobbies",
+        "what does he like doing"
+      ]
+    },
+    {
+      "tag": "family",
+      "patterns": [
+        "tell me about karthikeyan family",
+        "who are in his family",
+        "what is his family information",
+        "tell me about his family",
+        "how many members in his family",
+        "family details",
+        "family members"
+      ]
+    },
+    {
+      "tag": "father",
+      "patterns": [
+        "who is his father",
+        "what is his father name",
+        "tell me his father name",
+        "who is karthikeyan father",
+        "father name",
+        "dad name"
+      ]
+    },
+    {
+      "tag": "mother",
+      "patterns": [
+        "who is his mother",
+        "what is his mother name",
+        "tell me his mother name",
+        "who is karthikeyan mother",
+        "mother name",
+        "mom name"
+      ]
+    },
+    {
+      "tag": "elder_brother",
+      "patterns": [
+        "does he have an elder brother",
+        "does he have and elder brother",
+        "does he have elder brother",
+        "is there an elder brother",
+        "has he got an elder brother",
+        "does karthikeyan have an elder brother",
+        "does he have any elder brother",
+        "does he have older brother",
+        "elder brother",
+        "elder bro"
+      ]
+    },
+    {
+      "tag": "younger_brother",
+      "patterns": [
+        "does he have a younger brother",
+        "does he have younger brother",
+        "who is his younger brother",
+        "what is his younger brother name",
+        "younger brother",
+        "younger bro",
+        "tell me about his younger brother"
+      ]
+    },
+    {
+      "tag": "brother",
+      "patterns": [
+        "does he have a brother",
+        "does he have any brothers",
+        "who is his brother",
+        "what is his brother name",
+        "tell me about his brother",
+        "brother name",
+        "siblings",
+        "does he have siblings",
+        "how many siblings does he have"
+      ]
+    },
+    {
+      "tag": "sister",
+      "patterns": [
+        "does he have a sister",
+        "does he have an elder sister",
+        "does he have a younger sister",
+        "does he have any sisters",
+        "sister name",
+        "who is his sister"
+      ]
+    },
+    {
+      "tag": "linkedin",
+      "patterns": [
+        "show his linkedin profile",
+        "what is karthikeyan linkedin",
+        "give me his linkedin profile",
+        "where is his linkedin",
+        "linkedin profile"
+      ]
+    },
+    {
+      "tag": "github",
+      "patterns": [
+        "show his github profile",
+        "what is karthikeyan github",
+        "give me his github profile",
+        "where is his github",
+        "github profile"
+      ]
+    },
+    {
+      "tag": "leetcode",
+      "patterns": [
+        "show his leetcode profile",
+        "what is karthikeyan leetcode",
+        "give me his leetcode profile",
+        "where is his leetcode",
+        "leetcode profile"
+      ]
+    },
+    {
+      "tag": "girlfriend",
+      "patterns": [
+        "what is his gf name",
+        "what is karthikeyan gf name",
+        "what is his girlfriend name",
+        "who is his girlfriend",
+        "does karthikeyan have a girlfriend",
+        "tell me karthikeyan girlfriend name"
+      ]
+    }
+  ]
+}
