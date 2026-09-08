@@ -16,6 +16,22 @@ let isGenerating = false;
 let isScrollScheduled = false;
 
 // =====================================================
+// DEVICE DETECTION HELPER (MOBILE / TOUCH SCREENS)
+// =====================================================
+
+function isMobileDevice() {
+    const hasTouch = (
+        'ontouchstart' in window ||
+        (navigator.maxTouchPoints && navigator.maxTouchPoints > 0) ||
+        (window.matchMedia && window.matchMedia("(pointer: coarse)").matches)
+    );
+    const isSmallScreen = window.innerWidth <= 768;
+    const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    return isMobileUA || (hasTouch && isSmallScreen) || (window.matchMedia && window.matchMedia("(max-width: 768px)").matches);
+}
+
+// =====================================================
 // MOBILE SIDEBAR TOGGLE HANDLER
 // =====================================================
 
@@ -214,11 +230,17 @@ function generateLineByLine(text, onComplete) {
             setTimeout(() => scrollToBottomForce(), 150);
             setTimeout(() => scrollToBottomForce(), 300);
 
+            // Only auto-focus input on desktop devices with physical keyboards.
+            // On mobile devices, focusing forces the software keyboard to pop up, which covers the response.
             if (userInput) {
-                try {
-                    userInput.focus({ preventScroll: true });
-                } catch (e) {
-                    userInput.focus();
+                if (!isMobileDevice()) {
+                    try {
+                        userInput.focus({ preventScroll: true });
+                    } catch (e) {
+                        userInput.focus();
+                    }
+                } else {
+                    userInput.blur();
                 }
             }
             if (onComplete) onComplete();
@@ -264,6 +286,11 @@ async function sendMessage() {
 
     const message = userInput.value.trim();
     if (message === "") return;
+
+    // Immediately dismiss virtual keyboard on mobile so user can view conversation freely
+    if (userInput && isMobileDevice()) {
+        userInput.blur();
+    }
 
     addUserMessage(message);
     userInput.value = "";
@@ -324,6 +351,9 @@ function quickQuestion(question) {
     if (isGenerating) return;
     toggleSidebar(false); // Auto-close drawer on mobile if open
     userInput.value = question;
+    if (userInput && isMobileDevice()) {
+        userInput.blur();
+    }
     sendMessage();
 }
 
@@ -367,10 +397,14 @@ function newChat() {
     `;
 
     if (userInput) {
-        try {
-            userInput.focus({ preventScroll: true });
-        } catch (e) {
-            userInput.focus();
+        if (!isMobileDevice()) {
+            try {
+                userInput.focus({ preventScroll: true });
+            } catch (e) {
+                userInput.focus();
+            }
+        } else {
+            userInput.blur();
         }
     }
     scrollToBottomForce();
